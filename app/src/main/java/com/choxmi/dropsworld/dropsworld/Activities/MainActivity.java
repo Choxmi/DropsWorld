@@ -10,9 +10,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.choxmi.dropsworld.dropsworld.Fragments.ChatFragment;
+import com.choxmi.dropsworld.dropsworld.Fragments.ChatFragmentOld;
 import com.choxmi.dropsworld.dropsworld.Fragments.HomeFragment;
 import com.choxmi.dropsworld.dropsworld.Fragments.IconFragment;
+import com.choxmi.dropsworld.dropsworld.Fragments.ProfileFragment;
 import com.choxmi.dropsworld.dropsworld.R;
+import com.eftimoff.viewpagertransformers.BackgroundToForegroundTransformer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,8 +25,9 @@ public class MainActivity extends AppCompatActivity {
     private final int HOME = 1;
     private final int ICON = 0;
     private final int CHAT = 2;
+    private final int PROFILE = 3;
     private TabLayout tabLayout;
-    private int[] icons = {R.drawable.ic_blur_icon,R.drawable.ic_home,R.drawable.ic_chat,R.drawable.ic_blur_icon_hi,R.drawable.ic_home_hi,R.drawable.ic_chat_hi};
+    private int[] icons = {R.drawable.more_r,R.drawable.home_r,R.drawable.chatting_r,R.drawable.profile,R.drawable.more_selected_r,R.drawable.home_selected_r,R.drawable.chatting_selected_r,R.drawable.profile_s};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,16 +37,18 @@ public class MainActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
         mViewPager.setCurrentItem(HOME);
+        mViewPager.setPageTransformer(true,new BackgroundToForegroundTransformer());
         //tab setting up
         tabLayout = (TabLayout)findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
         tabLayout.getTabAt(0).setIcon(icons[0]);
-        tabLayout.getTabAt(1).setIcon(icons[4]);
+        tabLayout.getTabAt(1).setIcon(icons[5]);
         tabLayout.getTabAt(2).setIcon(icons[2]);
+        tabLayout.getTabAt(3).setIcon(icons[4]);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                tab.setIcon(icons[tab.getPosition()+3]);
+                tab.setIcon(icons[tab.getPosition()+4]);
             }
 
             @Override
@@ -88,13 +94,15 @@ public class MainActivity extends AppCompatActivity {
                 return HomeFragment.newInstance();
             } if (position==CHAT){
                 return ChatFragment.newInstance();
+            }if (position==PROFILE){
+                return ProfileFragment.newInstance();
             }
             return null;
         }
 
         @Override
         public int getCount() {
-            return 3;
+            return 4;
         }
 
         @Override
@@ -105,6 +113,8 @@ public class MainActivity extends AppCompatActivity {
                 case HOME:
                     return "";
                 case CHAT:
+                    return "";
+                case PROFILE:
                     return "";
             }
             return null;

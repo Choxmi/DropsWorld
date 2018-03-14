@@ -3,7 +3,6 @@ package com.choxmi.dropsworld.dropsworld.Publisher;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -46,7 +45,6 @@ public class GamePublisher extends AppCompatActivity implements AdapterView.OnIt
         public View getView(int position, View convertView, ViewGroup parent) {
             View itemView = convertView;
             ViewHolder itemViewHolder;
-            Log.e("Setting","Done");
             if(convertView == null){
                 itemView = getLayoutInflater().inflate(R.layout.platform_row,parent,false);
                 itemViewHolder = new ViewHolder();

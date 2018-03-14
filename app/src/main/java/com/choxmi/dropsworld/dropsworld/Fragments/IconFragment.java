@@ -8,10 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.choxmi.dropsworld.dropsworld.Publisher.AssetPublisher;
+import com.choxmi.dropsworld.dropsworld.Activities.ProfileActivity;
+import com.choxmi.dropsworld.dropsworld.Publisher.DoodlePublisher;
+import com.choxmi.dropsworld.dropsworld.Publisher.ImagePublisher;
+import com.choxmi.dropsworld.dropsworld.Publisher.HeadWordPublisher;
 import com.choxmi.dropsworld.dropsworld.Publisher.QuotePublisher;
 import com.choxmi.dropsworld.dropsworld.Publisher.StoryBoardPublisher;
 import com.choxmi.dropsworld.dropsworld.Publisher.GamePublisher;
+import com.choxmi.dropsworld.dropsworld.Publisher.VideoPublisher;
 import com.choxmi.dropsworld.dropsworld.R;
 
 /**
@@ -20,7 +24,7 @@ import com.choxmi.dropsworld.dropsworld.R;
 
 public class IconFragment extends Fragment {
 
-    Button storyBoardBtn,gameBtn,quoteBtn,imgBtn,vidBtn;
+    Button storyBoardBtn,gameBtn,quoteBtn,imgBtn,vidBtn, headWordBtn, profileBtn,doodleBtn;
 
     public IconFragment() {
     }
@@ -49,7 +53,6 @@ public class IconFragment extends Fragment {
                 startActivity(intent);
             }
         });
-
         gameBtn = (Button)rootView.findViewById(R.id.game_btn);
         gameBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +61,6 @@ public class IconFragment extends Fragment {
                 startActivity(intent);
             }
         });
-
         quoteBtn = (Button)rootView.findViewById(R.id.quote_btn);
         quoteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,7 +73,7 @@ public class IconFragment extends Fragment {
         imgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), AssetPublisher.class);
+                Intent intent = new Intent(getContext(), ImagePublisher.class);
                 startActivity(intent);
             }
         });
@@ -79,7 +81,31 @@ public class IconFragment extends Fragment {
         vidBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), AssetPublisher.class);
+                Intent intent = new Intent(getContext(), VideoPublisher.class);
+                startActivity(intent);
+            }
+        });
+        profileBtn = (Button)rootView.findViewById(R.id.profile_btn);
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+        headWordBtn = (Button)rootView.findViewById(R.id.headword_btn);
+        headWordBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), HeadWordPublisher.class);
+                startActivity(intent);
+            }
+        });
+        doodleBtn = (Button)rootView.findViewById(R.id.doodle_btn);
+        doodleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), DoodlePublisher.class);
                 startActivity(intent);
             }
         });

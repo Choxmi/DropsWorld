@@ -1,15 +1,26 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/quote_frame"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.facebook.drawee.view.DraweeView
-        android:id="@+id/quote_screen"
+    <ImageView
+        android:id="@+id/quote_screen_quote"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_rounded_rectangle"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/quote_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/hacker" />
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:text="Your Quote Goes Here..."
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp" />
 
 </FrameLayout>

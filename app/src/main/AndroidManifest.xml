@@ -1,26 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.choxmi.dropsworld.dropsworld">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/dropworld_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/FullScreen"
-        android:name=".DropsWorldApplication">
+        android:name=".DropsWorldApplication"
+        tools:replace="android:icon">
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.choxmi.dropsworld.dropsworld.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
         <activity
             android:name=".Activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/FullScreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Publisher.StoryBoardPublisher"
             android:label="@string/app_name"
@@ -34,13 +44,58 @@
             android:label="@string/app_name"
             android:theme="@style/FullScreen">
         </activity>
-        <activity android:name=".Publisher.AssetPublisher"
+        <activity android:name=".Publisher.ImagePublisher"
             android:label="@string/app_name"
             android:theme="@style/FullScreen">
         </activity>
         <activity android:name=".Publisher.QuotePublisher"
             android:label="@string/app_name"
             android:theme="@style/FullScreen">
+        </activity>
+        <activity android:name=".Publisher.HeadWordPublisher"
+            android:label="@string/app_name"
+            android:theme="@style/FullScreen">
+        </activity>
+        <activity android:name=".Publisher.DoodlePublisher"
+            android:label="@string/app_name"
+            android:theme="@style/FullScreen">
+        </activity>
+        <activity android:name=".Publisher.VideoPublisher"
+            android:label="@string/app_name"
+            android:theme="@style/FullScreen">
+        </activity>
+        <activity android:name=".Activities.ProfileActivity"
+            android:label="@string/app_name"
+            android:theme="@style/FullScreen">
+        </activity>
+        <activity android:name=".Activities.CommunityChatActivity"
+            android:label="@string/app_name"
+            android:theme="@style/FullScreen">
+        </activity>
+        <activity android:name=".Activities.FullScreenImgActivity"
+            android:label="@string/app_name"
+            android:theme="@style/FullScreen">
+        </activity>
+        <activity android:name=".Activities.SinglePostActivity"
+            android:label="@string/app_name"
+            android:theme="@style/FullScreen">
+        </activity>
+        <activity android:name=".Activities.SignUpActivity"
+            android:label="@string/app_name"
+            android:theme="@style/FullScreen">
+        </activity>
+        <activity android:name=".Activities.ChatActivity"
+            android:label="@string/app_name"
+            android:theme="@style/FullScreen">
+        </activity>
+        <activity android:name=".Activities.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

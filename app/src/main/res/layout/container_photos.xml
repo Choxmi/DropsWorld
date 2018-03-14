@@ -2,14 +2,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:showIn="@layout/activity_main">
+    android:layout_height="wrap_content">
 
-    <com.facebook.drawee.view.DraweeView
-        android:id="@+id/img_container"
-        android:layout_width="wrap_content"
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_container_photos"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
-        android:src="@drawable/hacker" />
+        app:placeholderImage="@drawable/button_action_selector" />
+
+    <TextView
+        android:id="@+id/img_container_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="gone" />
 </FrameLayout>

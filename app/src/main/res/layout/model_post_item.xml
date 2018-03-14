@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
         <com.facebook.drawee.view.SimpleDraweeView
@@ -17,7 +18,7 @@
             android:layout_height="60dp"
             android:layout_weight="1"
             app:placeholderImage="@drawable/demo_holder"
-            app:roundAsCircle="true"/>
+            app:roundAsCircle="true" />
 
         <TextView
             android:id="@+id/user_post_txt"
@@ -25,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:text="TextView"
+            android:text="Username"
             android:textSize="18sp" />
 
         <TextView
@@ -35,58 +36,76 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="100dp"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="0h" />
 
     </LinearLayout>
 
     <FrameLayout
         android:id="@+id/post_container"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
-        <include
-            layout="@layout/container_photos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
     </FrameLayout>
+
+    <TextView
+        android:id="@+id/captionTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="60dp"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:id="@+id/like_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="#0000"
-            app:srcCompat="@drawable/ic_favorite_emp" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/post_like" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:id="@+id/plus_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="#0000"
+            android:scaleType="centerCrop"
+            android:src="@drawable/plus_icon" />
+
+        <ImageButton
+            android:id="@+id/comment_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="#0000"
-            app:srcCompat="@drawable/ic_comment" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/post_comment" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:id="@+id/share_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:background="#0000"
-            app:srcCompat="@drawable/ic_forward" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/post_share" />
 
     </LinearLayout>
 

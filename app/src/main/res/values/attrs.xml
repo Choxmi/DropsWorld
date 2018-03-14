@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextViewPlus">
+    </declare-styleable>
+    <declare-styleable name="TextViewPlus_customFont" format="integer">
+    </declare-styleable>
+</resources>

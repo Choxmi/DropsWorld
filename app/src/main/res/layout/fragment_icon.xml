@@ -20,23 +20,42 @@
         tools:layout_constraintRight_creator="1">
 
         <Button
-            android:id="@+id/storyboard_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/storyboard_comb"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="0.16"
+            android:background="@drawable/icon_blank"
             android:scaleType="fitCenter"
-            android:src="@android:drawable/ic_menu_camera"
+            tools:layout_editor_absoluteX="107dp"
+            tools:layout_editor_absoluteY="352dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1">
+
+        <Button
+            android:id="@+id/storyboard_btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/icon_storyboard"
+            android:scaleType="fitCenter"
             tools:layout_editor_absoluteX="185dp"
             tools:layout_editor_absoluteY="352dp" />
 
         <Button
             android:id="@+id/game_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_weight="0.16"
-            android:background="@drawable/game_comb"
+            android:background="@drawable/icon_games"
             android:scaleType="fitCenter"
-            android:src="@android:drawable/ic_menu_camera"
             tools:layout_editor_absoluteX="107dp"
             tools:layout_editor_absoluteY="352dp" />
     </LinearLayout>
@@ -54,32 +73,30 @@
 
         <Button
             android:id="@+id/image_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_weight="1"
-            android:background="@drawable/image_comb"
+            android:background="@drawable/icon_photo"
             android:scaleType="fitCenter"
-            android:src="@android:drawable/ic_menu_camera"
             tools:layout_editor_absoluteX="65dp"
             tools:layout_editor_absoluteY="120dp" />
 
         <Button
             android:id="@+id/quote_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_weight="1"
-            android:background="@drawable/quotes_comb"
+            android:background="@drawable/icon_quote"
             android:scaleType="fitCenter"
-            android:src="@android:drawable/ic_menu_camera"
             tools:layout_editor_absoluteX="145dp"
             tools:layout_editor_absoluteY="275dp" />
 
         <Button
             android:id="@+id/video_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_weight="1"
-            android:background="@drawable/video_comb"
+            android:background="@drawable/icon_video"
             android:scaleType="fitCenter"
             tools:layout_editor_absoluteX="65dp"
             tools:layout_editor_absoluteY="275dp" />
@@ -87,7 +104,7 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="88dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -96,72 +113,44 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1">
 
-        <ImageButton
-            android:id="@+id/imageView2"
+        <Button
+            android:id="@+id/headword_btn"
             android:layout_width="100dp"
-            android:layout_height="88dp"
-            android:layout_weight="1"
-            android:background="@drawable/honey"
+            android:layout_height="100dp"
+            android:background="@drawable/icon_headword"
             android:scaleType="fitCenter"
-            android:src="@android:drawable/ic_menu_camera"
             tools:layout_editor_absoluteX="145dp"
             tools:layout_editor_absoluteY="120dp" />
 
-        <ImageButton
-            android:id="@+id/imageView3"
+        <Button
+            android:id="@+id/profile_btn"
             android:layout_width="100dp"
-            android:layout_height="88dp"
-            android:layout_weight="1"
-            android:background="@drawable/honey"
+            android:layout_height="100dp"
+            android:background="@drawable/icon_profile"
             android:scaleType="fitCenter"
-            android:src="@android:drawable/ic_menu_camera"
             tools:layout_editor_absoluteX="222dp"
             tools:layout_editor_absoluteY="120dp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="88dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1">
 
-        <ImageButton
-            android:id="@+id/imageView11"
+        <Button
+            android:id="@+id/doodle_btn"
             android:layout_width="100dp"
-            android:layout_height="88dp"
-            android:layout_weight="1"
-            android:background="@drawable/honey"
+            android:layout_height="100dp"
+            android:background="@drawable/icon_doodle"
             android:scaleType="fitCenter"
-            android:src="@android:drawable/ic_menu_camera"
-            tools:layout_editor_absoluteX="185dp"
-            tools:layout_editor_absoluteY="196dp" />
-
-        <ImageButton
-            android:id="@+id/imageView8"
-            android:layout_width="100dp"
-            android:layout_height="88dp"
-            android:layout_weight="1"
-            android:background="@drawable/honey"
-            android:scaleType="fitCenter"
-            tools:layout_editor_absoluteX="185dp"
-            android:src="@android:drawable/ic_menu_camera"
-            tools:layout_editor_absoluteY="196dp" />
-
-        <ImageButton
-            android:id="@+id/imageView7"
-            android:layout_width="100dp"
-            android:layout_height="88dp"
-            android:layout_weight="1"
-            android:background="@drawable/honey"
-            android:scaleType="fitCenter"
-            tools:layout_editor_absoluteX="107dp"
-            android:src="@android:drawable/ic_menu_camera"
-            tools:layout_editor_absoluteY="196dp" />
+            tools:layout_editor_absoluteX="145dp"
+            tools:layout_editor_absoluteY="120dp" />
 
     </LinearLayout>
 

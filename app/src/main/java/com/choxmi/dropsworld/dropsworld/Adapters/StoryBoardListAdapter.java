@@ -41,14 +41,8 @@ public class StoryBoardListAdapter extends RecyclerView.Adapter<StoryBoardListAd
         holder.storyItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                FragmentTransaction transaction = fragmentManager.beginTransaction();
-//                StoryBoardFragment storyBoardFragment = new StoryBoardFragment();
-//                transaction.add(viewGroup.getId(),storyBoardFragment);
-//                transaction.commit();
-
                 Intent intent = new Intent(context, StoryContent.class);
                 context.startActivity(intent);
-
             }
         });
     }

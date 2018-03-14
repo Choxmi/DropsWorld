@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/chat_item_layout_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/ic_chat_bubble_others"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="invisible">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/other_emo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/emo1"
+            app:placeholderImage="@drawable/emo5"/>
+
+        <TextView
+            android:id="@+id/chat_msg_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Meassage" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/chat_item_layout_my"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ic_chat_bubble_my"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/chat_msg_my"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Meassage" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/my_emo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</RelativeLayout>
